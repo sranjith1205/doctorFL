@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
+import { MomentJsComponent } from './moment-js/moment-js.component'
+import { DoctorAvailableTimeComponent } from './doctor-available-time/doctor-available-time.component';
 
 
 @NgModule({
@@ -14,6 +16,6 @@ import { HomePageRoutingModule } from './home-routing.module';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage]
+  declarations: [HomePage, MomentJsComponent, DoctorAvailableTimeComponent]
 })
 export class HomePageModule {}

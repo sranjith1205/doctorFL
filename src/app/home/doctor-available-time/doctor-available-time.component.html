@@ -12,11 +12,11 @@
 <ion-content [fullscreen]="true">
   <ng-container>
     <ion-row class="appt-mon-year-wrap">
-          <h3 class="appt-mon-year">June, 2020</h3>
+      <h3 class="appt-mon-year">{{ monthDate }}</h3>
     </ion-row>  
     <ion-item class="appt-date-item" lines="none">
       <ion-row class="appt-date-row">
-        <ion-col *ngFor="let item of apptDate" class="appt-date-wrap">
+        <ion-col *ngFor="let item of apptDate" class="appt-date-wrap" [ngClass]="{ 'selectedDate' : item.isSelected}" (click)="whichDate(item)">
             <p class="appt-date">{{ item.date}}</p>
             <p class="appt-day">{{ item.dayWord}}</p>    
         </ion-col>
